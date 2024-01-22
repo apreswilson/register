@@ -1,0 +1,126 @@
+:root {
+  --keypad-height: 45vh;
+  --keypad-width: 34vw;
+  --keypad-responsive-width: 95vw;
+}
+
+.keypad {
+  display: flex;
+}
+
+.numpad {
+  width: calc(var(--keypad-width) / 2);
+  height: var(--keypad-height);
+  margin: auto;
+  display: grid;
+  grid-template-columns: calc(17vw / 3) calc(17vw / 3) calc(17vw / 3);
+}
+
+.order-details {
+  width: calc(var(--keypad-width) / 2);
+  height: var(--keypad-height);
+}
+
+.number {
+  margin: auto;
+  width: calc(17vw / 3);
+  height: calc(45vh / 4);
+  background-color: rgb(220, 220, 220);
+  font-size: 3vw;
+  box-shadow: 2px 2px 25px black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.number>p {
+  margin: 0;
+  line-height: calc(var(--keypad-height) / 4);
+  text-align: center;
+  font-weight: bold;
+}
+
+.number:hover {
+  background-color: rgb(220, 220, 220, 0.8);
+  cursor: pointer;
+}
+
+#clear,
+#back-one {
+  color: rgb(180, 45, 45);
+}
+
+.top-bar {
+  height: 7vh;
+  background-color: rgb(75, 173, 105);
+}
+
+.top-bar>p {
+  margin: 0;
+  text-align: center;
+  line-height: 7vh;
+  font-size: 1.5vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.values {
+  height: 31vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(27, 27, 27);
+
+}
+
+.values>p {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 1.2vw;
+}
+
+.payment {
+  height: 7vh;
+  background-color: rgb(75, 173, 105);
+  text-align: center;
+}
+
+.payment>p {
+  margin: 0;
+  height: 100%;
+  font-size: 2.5vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: white;
+
+  /*TODO: Center pay paragraph. it aint centered*/
+}
+
+.payment:hover {
+  background-color: rgb(75, 173, 105, 0.8);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+
+  .numpad,
+  .order-details {
+    width: calc(var(--keypad-responsive-width) / 2);
+  }
+
+  .numpad {
+    grid-template-columns: calc(47.5vw / 3) calc(47.5vw / 3) calc(47.5vw / 3);
+  }
+
+  .number {
+    width: calc(47.5vw / 3);
+    font-size: 5vw;
+  }
+
+  .values>p,
+  .top-bar>p,
+  .payment>p {
+    font-size: 4vw;
+  }
+}

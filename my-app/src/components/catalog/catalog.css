@@ -1,0 +1,76 @@
+@import "../../App.css";
+
+.topbar {
+  width: var(--column-one-width);
+  height: var(--header-bar-height);
+  font-family: var(--default-font-family);
+  background-color: var(--header-bar-color);
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: bold;
+}
+
+.section>p {
+  font-size: var(--header-bar-font-size);
+  height: var(--header-bar-height);
+  line-height: var(--header-bar-height);
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  color: black;
+  margin: 0;
+}
+
+.item-container {
+  width: var(--column-one-width);
+  height: calc(var(--row-height) - 7dvh);
+  display: grid;
+  grid-template-columns: calc(var(--column-one-width) / 3) calc(var(--column-one-width) / 3) calc(var(--column-one-width) / 3);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.item {
+  height: calc((var(--row-height) - 7dvh) / 3);
+  font-family: var(--default-font-family);
+  background-color: var(--button-background-color);
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: 2px 2px 10px;
+}
+
+.item:hover {
+  background-color: var(--button-background-color-hover);
+  cursor: pointer;
+}
+
+.item-img {
+  height: calc((var(--row-height) - 7dvh) / 3);
+  width: 6.5dvw;
+}
+
+@media screen and (max-width: 900px) {
+
+  .topbar,
+  .item-container {
+    width: var(--column-responsive-width);
+  }
+
+  .section {
+    width: calc(var(--catalog-responsive-width) / 4);
+  }
+
+  .section>p {
+    font-size: var(--header-bar-responsive-font-size)
+  }
+
+  .item-container {
+    grid-template-columns: calc(var(--column-responsive-width) / 2) calc(var(--column-responsive-width) / 2);
+  }
+
+  .item-img {
+    width: 16dvw;
+  }
+}

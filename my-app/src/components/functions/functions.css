@@ -1,0 +1,64 @@
+@import "../../App.css";
+
+.header-bar>p {
+  width: var(--column-two-width);
+  height: var(--header-bar-height);
+  line-height: var(--header-bar-height);
+  font-family: var(--default-font-family);
+  background-color: var(--header-bar-color);
+  font-size: var(--header-bar-font-size);
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  color: black;
+  height: 100%;
+}
+
+.buttons-container {
+  background-color: var(--components-background-color);
+  width: var(--column-two-width);
+  height: calc(var(--row-height) - 7dvh);
+  display: grid;
+  grid-template-columns: calc(var(--column-two-width) / 3) calc(var(--column-two-width) / 3) calc(var(--column-two-width) / 3);
+}
+
+.button {
+  height: calc((var(--row-height) - 10dvh) / 2);
+  line-height: calc((var(--row-height) - 7dvh) / 2);
+  background-color: var(--button-background-color);
+  margin: auto;
+  width: 80%;
+  border-radius: 25px;
+}
+
+.button>p {
+  height: calc((var(--row-height) - 10dvh) / 2);
+  line-height: calc((var(--row-height) - 10dvh) / 2);
+  font-size: var(--header-bar-font-size);
+  font-family: var(--default-font-family);
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: var(--button-background-color-hover);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+
+  .header-bar>p,
+  .buttons-container {
+    width: var(--column-responsive-width);
+  }
+
+  .header-bar>p,
+  .button>p {
+    font-size: var(--header-bar-responsive-font-size);
+  }
+
+  .buttons-container {
+    grid-template-columns: calc(var(--column-responsive-width) / 3) calc(var(--column-responsive-width) / 3) calc(var(--column-responsive-width) / 3);
+  }
+}

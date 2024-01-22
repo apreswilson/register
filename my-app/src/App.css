@@ -1,0 +1,91 @@
+:root {
+  --row-width: 95dvw;
+  --row-height: 45dvh;
+  --column-one-width: 60dvw;
+  --column-two-width: 34dvw;
+  --column-responsive-width: 95dvw;
+  --column-responsive-height: 95dvh;
+  --component-responsive-height: 45dvh;
+  --header-bar-height: 7dvh;
+  --header-bar-font-size: 1.5dvw;
+  --header-bar-responsive-font-size: 3.5dvw;
+  --components-background-color: rgb(27, 27, 27);
+  --header-bar-color: rgb(75, 173, 105);
+  --default-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --button-background-color: rgb(220, 220, 220);
+  --button-background-color-hover: rgb(220, 220, 220, 0.8)
+}
+
+body {
+  background-color: rgb(70, 70, 70);
+  margin: 0;
+}
+
+.top-row,
+.bottom-row {
+  height: var(--row-height);
+  width: var(--row-width);
+  display: flex;
+  gap: 1dvw;
+}
+
+.top-row {
+  margin: 3dvh auto 0 auto;
+}
+
+.bottom-row {
+  margin: 4dvh auto 0 auto;
+}
+
+.catalog {
+  height: var(--row-height);
+  width: var(--column-one-width);
+  background-color: var(--components-background-color);
+}
+
+.functions {
+  height: var(--row-height);
+  width: var(--column-two-width);
+}
+
+.list {
+  height: var(--row-height);
+  width: var(--column-one-width);
+}
+
+.keypad {
+  height: var(--row-height);
+  width: var(--column-two-width)
+}
+
+@media screen and (max-width: 900px) {
+
+  .top-row,
+  .bottom-row {
+    flex-direction: column;
+    height: var(--column-responsive-height);
+  }
+
+  .bottom-row {
+    margin: 2dvh auto 2dvh auto;
+  }
+
+  .catalog {
+    margin-top: 1.25dvh;
+    width: var(--column-responsive-width);
+  }
+
+  .functions {
+    margin-top: 2.5dvh;
+    width: var(--column-responsive-width);
+  }
+
+  .list {
+    width: var(--column-responsive-width);
+  }
+
+  .keypad {
+    margin-top: 2.5dvh;
+    width: var(--column-responsive-width);
+  }
+}
