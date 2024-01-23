@@ -11,6 +11,7 @@
   --header-bar-responsive-font-size: 3.5dvw;
   --components-background-color: rgb(27, 27, 27);
   --header-bar-color: rgb(75, 173, 105);
+  --header-bar-color-hover: rgb(75, 173, 105, 0.8);
   --default-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --button-background-color: rgb(220, 220, 220);
   --button-background-color-hover: rgb(220, 220, 220, 0.8)

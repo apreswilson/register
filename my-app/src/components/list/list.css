@@ -1,3 +1,5 @@
+@import "../../App.css";
+
 :root {
   --list-width: 60vw;
   --list-height: 45vh;
@@ -5,40 +7,40 @@
 }
 
 .head-bar {
-  height: 7vh;
-  background-color: rgb(75, 173, 105);
+  height: var(--header-bar-height);
+  background-color: var(--header-bar-color);
 }
 
 .head-bar>p {
+  line-height: var(--header-bar-height);
+  font-size: var(--header-bar-font-size);
+  font-family: var(--default-font-family);
   margin: 0;
   text-align: center;
-  line-height: 7vh;
-  font-size: 1.5vw;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
 }
 
 .items-display {
-  height: calc(var(--list-height) - 7vh);
-  width: var(--list-width);
+  height: calc(var(--row-height) - 7dvh);
+  width: var(--column-one-width);
   overflow-y: auto;
   overflow-x: hidden;
 }
 
 .display-table {
+  max-height: calc(var(--row-height) - 7dvh);
+  font-family: var(--default-font-family);
   width: 100%;
-  max-height: calc(var(--list-height) - 7vh);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
 }
 
 .table-head-row {
+  height: var(--header-bar-height);
+  width: var(--column-one-width);
   background-color: rgb(200, 200, 200);
-  height: 7vh;
-  width: var(--list-width);
   position: sticky;
   top: 0;
-  font-size: 1.25vw;
+  font-size: 1.25dvw;
 }
 
 table {
@@ -46,8 +48,8 @@ table {
 }
 
 .body-row {
+  background-color: var(--button-background-color);
   text-align: center;
-  background-color: rgb(220, 220, 220);
   box-shadow: 5px 5px 10px black;
 }
 
@@ -67,11 +69,12 @@ table {
 
 
 td.quantity {
-  width: 1vw;
-  padding: 1vh 3vw 1vh 3vw;
+  width: 1dvw;
+  padding: 1dvh 3dvw 1dvh 3dvw;
 }
 
 td>input {
+  font-family: var(--default-font-family);
   width: 3vw;
   height: 4vh;
   font-size: 1vw;
@@ -79,7 +82,6 @@ td>input {
   background-color: rgb(20, 20, 20, 0);
   border: none;
   box-shadow: none;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
 }
 
@@ -89,11 +91,11 @@ td>input:focus {
 
 @media screen and (max-width: 900px) {
   .items-display {
-    width: var(--responsive-list-width);
+    width: var(--column-responsive-width);
   }
 
   .head-bar>p {
-    font-size: 3.5vw;
+    font-size: var(--header-bar-responsive-font-size);
   }
 
   .table-head-row {
