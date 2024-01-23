@@ -1,14 +1,14 @@
 // Updated Catalog.tsx
 import './catalog.css';
+import catalog from './full-catalog'
 
-let firstname: string = "General";
 
 function Catalog() {
   return (
     <div className="catalog">
       <div className="topbar">
         <div className="section">
-          <p>{firstname}</p>
+          <p>General</p>
         </div>
         <div className="section">
           <p>Produce</p>

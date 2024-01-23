@@ -10,11 +10,11 @@ function Functions() {
         <div className="button" id="coupon">
           <p>Coupon</p>
         </div>
-        <div className="button" id="cancel">
-          <p>Cancel</p>
-        </div>
         <div className="button" id="void">
-          <p>Void</p>
+          <p>Clear Order</p>
+        </div>
+        <div className="button" id="end-day">
+          <p>End Day</p>
         </div>
         <div className="button" id="manager">
           <p>Manager</p>
